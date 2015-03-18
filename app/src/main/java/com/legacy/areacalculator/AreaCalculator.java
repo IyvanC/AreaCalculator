@@ -4,6 +4,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class AreaCalculator extends ActionBarActivity {
@@ -13,6 +16,48 @@ public class AreaCalculator extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_calculator);
     }
+
+
+
+
+    public void buttonOnClick(View v)
+    {
+        double Length, Width, Area;
+
+        EditText length = (EditText) findViewById(R.id.Length);
+        EditText width = (EditText) findViewById(R.id.Width);
+        TextView output = (TextView) findViewById(R.id.Output);
+
+        Length = Double.parseDouble(length.getText().toString());
+        Width = Double.parseDouble(width.getText().toString());
+
+        Area = Length * Width;
+
+        output.setText(Double.toString(Area));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Override
